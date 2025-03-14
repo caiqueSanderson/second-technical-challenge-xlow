@@ -1,0 +1,126 @@
+.sliderContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leftArrow,
+.rightArrow {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.leftArrow {
+    left: 20px;
+}
+
+.rightArrow {
+    right: 20px;
+}
+
+.dotsContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 2;
+    overflow: visible; 
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+    background: white;
+}
+
+.dotActive {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    background: white;
+    transform: scale(1.5);
+}
+
+.portraitWarning {
+    background: #000;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.portraitWarning p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+    font-family: "Helvetica Neue", "Arial";
+    font-style: italic;
+    color: #c3c3c3;
+}
+  
+.rotateContainer svg {
+    width: 135px;
+    animation: rotate 5s ease-in-out infinite alternate;
+    animation-delay: 2s;
+  }
+  
+  @keyframes rotate {
+    0% {
+          transform: rotate(0deg)
+      }
+      50% {
+          transform: rotate(90deg)
+      }
+      100% {
+          transform: rotate(90deg)
+      }
+  }
